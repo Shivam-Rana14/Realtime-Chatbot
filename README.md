@@ -1,62 +1,85 @@
-# OpenAI WebRTC Shadcn Next15 Starter
-This is a WebRTC-based Voice AI stream application using `OpenAI`'s `Realtime API` and `WebRTC`. Project contains `/api` route and UI components developed with `Next.js` and `shadcn/ui`. It supports real-time audio conversations with a hook to abstract the WebRTC handling.
+# Real-time Chatbot with Next.js 15
 
-## Features
-- **Next.js Framework**: Built with Next.js for server-side rendering and API routes.
-- **Modern UI**: Animated using Tailwind CSS & Framer Motion & shadcn/ui.
-- **Use-WebRTC Hook**: A hook to abstract the OpenAI WebRTC handling.
-- **Tool Calling**: 6 example functions to demonstrate client side tools along with Realtime API: `getCurrentTime`, `partyMode`, `changeBackground`, `launchWebsite`, `copyToClipboard`, `scrapeWebsite` (requires FireCrawl API key)
-- **Localization**: Select language for app strings and the voice agent (English, Spanish, French, Chinese)
-- **Type Safety**: TypeScript with strict eslint rules (optional)
+A modern, real-time chatbot application built with Next.js 15, featuring a beautiful UI powered by shadcn/ui components and Tailwind CSS. This project demonstrates the implementation of a real-time chat interface with modern web technologies.
 
-  
-## Requirements
-- **Deno runtime** or **Node.js**
-- OpenAI API Key or Azure OpenAI API Key in `.env` file
+## 🚀 Features
 
-## Installation
+- **Next.js 15**: Built with the latest Next.js framework for optimal performance
+- **Modern UI Components**: 
+  - shadcn/ui for beautiful, accessible components
+  - Tailwind CSS for styling
+  - Framer Motion for smooth animations
+- **Type Safety**: Full TypeScript support with strict type checking
+- **Modern Development**:
+  - Turbopack for faster development experience
+  - ESLint for code quality
+  - PostCSS for advanced CSS processing
 
-### 1. Clone the Repository
-Clone or fork this repository to get started:
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.1.1
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS
+- **Component Library**: shadcn/ui
+- **Animation**: Framer Motion
+- **Form Handling**: React Hook Form
+- **Type Checking**: TypeScript
+- **Development**: Turbopack
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-git clone <your-forked-repo-url>
-cd <repo-folder>
+git clone https://github.com/Shivam-Rana14/Realtime-Chatbot.git
+cd Realtime-Chatbot
 ```
 
-### 2. Environment Setup
-Create a `.env` file in the root directory:
-```env
-OPENAI_API_KEY=your-openai-api-key
-```
-
-### 3. Install Dependencies
-If using **Node.js**:
+2. Install dependencies:
 ```bash
 npm install
+# or
+pnpm install
 ```
 
-If using **Deno**:
-```bash
-deno install
+3. Create a `.env` file in the root directory and add your environment variables:
+```env
+# Add your environment variables here
 ```
 
-### 4. Run the Application
-
-#### Using Node.js:
+4. Start the development server:
 ```bash
 npm run dev
-```
-
-#### Using Deno:
-```bash
-deno task start
+# or
+pnpm dev
 ```
 
 The application will be available at `http://localhost:3000`.
 
-## Usage
-1. Open the app in your browser: `http://localhost:3000`.
-3. Select a voice and start the audio session.
+## 🏗️ Project Structure
 
-## Author
-This project was created and is maintained by **Shivam Rana**.
+```
+├── app/              # Next.js app directory
+│   ├── api/         # API routes
+│   ├── layout.tsx   # Root layout
+│   └── page.tsx     # Home page
+├── components/      # React components
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functions
+├── public/         # Static assets
+└── types/          # TypeScript type definitions
+```
+
+## 🚀 Available Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build the application
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+Created by [Shivam Rana](https://github.com/Shivam-Rana14)
