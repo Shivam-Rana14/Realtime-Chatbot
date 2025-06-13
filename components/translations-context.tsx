@@ -1,25 +1,24 @@
-"use client"
+'use client'
 
 import { createContext, useContext, useState, ReactNode } from 'react'
-import { en } from '@/lib/translations/en'
-import { es } from '@/lib/translations/es'
-import { fr } from '@/lib/translations/fr'
-import { zh } from '@/lib/translations/zh'
+
+const en = {
+  broadcast: { start: 'Start Chat', end: 'End Chat', live: 'Live' },
+  status: {
+    idle: 'Press start to begin',
+    connecting: 'Connecting…',
+    connected: 'Connected',
+    ended: 'Session ended',
+  },
+}
 
 type TranslationValue = string | { [key: string]: TranslationValue }
 
-type Translations = {
-  [key: string]: TranslationValue
-}
+type Translations = { [key: string]: TranslationValue }
 
-const translations: { [key: string]: Translations } = {
-  en,
-  es,
-  fr,
-  zh
-}
+const translations: { [key: string]: Translations } = { en }
 
-type TranslationsContextType = {
+interface TranslationsContextType {
   t: (key: string) => string
   locale: string
   setLocale: (locale: string) => void
@@ -33,12 +32,10 @@ export function TranslationsProvider({ children }: { children: ReactNode }) {
   const t = (key: string): string => {
     const keys = key.split('.')
     let value: TranslationValue = translations[locale]
-    
     for (const k of keys) {
       if (value === undefined) return key
       value = typeof value === 'object' ? value[k] : key
     }
-
     return typeof value === 'string' ? value : key
   }
 
