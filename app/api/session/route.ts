@@ -16,7 +16,7 @@ export async function POST() {
                 model: "gpt-4o-realtime-preview-2024-12-17",
                 voice: "alloy",
                 modalities: ["audio", "text"],
-                instructions:"Start conversation with the user by saying 'Hello, how can I help you today?' Use the available tools when relevant. After executing a tool, you will need to respond (create a subsequent conversation item) to the user sharing the function result or error. If you do not respond with additional message with function result, user will not know you successfully executed the tool. Speak and respond in the language of the user.",
+                instructions:"Your name is Sara, And I want you to tart conversation with the user by saying 'Hello, my name is Sara, how can I help you today?' Use the available tools when relevant. After executing a tool, you will need to respond (create a subsequent conversation item) to the user sharing the function result or error. If you do not respond with additional message with function result, user will not know you successfully executed the tool. Speak and respond in the language of the user.Response should be in the language of the user input.",
                 tool_choice: "auto",
             }),
         });
